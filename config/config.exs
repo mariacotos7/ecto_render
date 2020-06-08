@@ -11,7 +11,7 @@ config :countdown,
 
 # Configures the endpoint
 config :countdown, CountdownWeb.Endpoint,
-  url: [host: "localhost"],
+  url: [host: "https://ecto-render.onrender.com"],
   secret_key_base: "9j0tqiblSHwuhj60KDJHOfCjaS1Z3j7gJLF5BrIOA6K195C6m1MTLerJkNa7duKB",
   render_errors: [view: CountdownWeb.ErrorView, accepts: ~w(html json)],
   pubsub: [name: Countdown.PubSub,
