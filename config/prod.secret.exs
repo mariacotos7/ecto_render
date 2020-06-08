@@ -9,12 +9,19 @@ use Mix.Config
 # kept out of version control and might be hard to recover
 # or recreate for your teammates (or yourself later on).
 config :countdown, CountdownWeb.Endpoint,
-  secret_key_base: "oKX1B8JxNtOM1WVWAoUZjx3Pd2xQjwt/DVHfzrgpSVs6jVxq//EtZ6TMnm90QUTX"
+  load_from_system_env: true,
+  url: [scheme: "https", host: "ECTO-HEROKU.herokuapp.com", port: 443],
+  force_ssl: [rewrite_on: [:x_forwarded_proto]],
+  cache_static_manifest: "priv/static/cache_manifest.json",
+  secret_key_base: Map.fetch!(System.get_env(), "SECRET_KEY_BASE")
+
+
+# Do not print debug messages in production
+config :logger, level: :info
 
 # Configure your database
 config :countdown, Countdown.Repo,
   adapter: Ecto.Adapters.Postgres,
-  username: "maria",
-  password: "sX9WN0qjQhTXGHmqHZTcuASyvkDuoR2p",
-  database: "countdown",
-  pool_size: 15
+  pool_size: 18,
+  ssl: true,
+  url: System.get_env("DATABASE_URL")
