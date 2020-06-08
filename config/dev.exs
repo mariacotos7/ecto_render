@@ -51,8 +51,8 @@ config :phoenix, :stacktrace_depth, 20
 # Configure your database
 config :countdown, Countdown.Repo,
   adapter: Ecto.Adapters.Postgres,
-  username: "postgres",
-  password: "test1",
+  username: "maria",
+  password: "sX9WN0qjQhTXGHmqHZTcuASyvkDuoR2p",
   database: "countdown",
-  hostname: "localhost",
+  hostname: "dpg-brevfqh8vr26ikgk8k7g",
   pool_size: 10

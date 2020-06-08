@@ -12,8 +12,8 @@ config :logger, level: :warn
 # Configure your database
 config :countdown, Countdown.Repo,
   adapter: Ecto.Adapters.Postgres,
-  username: "postgres",
-  password: "postgres",
-  database: "countdown_test",
-  hostname: "localhost",
+  username: "maria",
+  password: "sX9WN0qjQhTXGHmqHZTcuASyvkDuoR2p",
+  database: "countdown",
+  hostname: "dpg-brevfqh8vr26ikgk8k7g",
   pool: Ecto.Adapters.SQL.Sandbox

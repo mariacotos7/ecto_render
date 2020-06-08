@@ -14,7 +14,7 @@ config :countdown, CountdownWeb.Endpoint,
 # Configure your database
 config :countdown, Countdown.Repo,
   adapter: Ecto.Adapters.Postgres,
-  username: "postgres",
-  password: "postgres",
-  database: "countdown_prod",
+  username: "maria",
+  password: "sX9WN0qjQhTXGHmqHZTcuASyvkDuoR2p",
+  database: "countdown",
   pool_size: 15
